@@ -4,17 +4,13 @@ import java.time.LocalDate;
 
 public class Animais {
 
-    private String numeroPaciente;
+    private String numeroPaciente = String.valueOf(Math.random());
     private String especie;
     private String raca;
     private String cor;
     private LocalDate dataDeNascimento;
     private String nome;
     private Proprietario proprietario;
-
-    public Animais(Long numeroPaciente) {
-        this.numeroPaciente = String.valueOf(Long.MAX_VALUE);
-    }
 
     public Animais(String especie, String raca, String cor, LocalDate dataDeNascimento, String nome, Proprietario proprietario) {
         this.especie = especie;
