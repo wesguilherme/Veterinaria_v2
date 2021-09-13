@@ -17,6 +17,17 @@ public class Medico extends Pessoa{
         return numeroDeRegistro;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "\"cpf\":\"" + super.getCpf() + "\"" +
+                ", \"nome\":\"" + super.getNome() + "\"" +
+                ", \"sobrenome\":\"" + super.getSobrenome() + "\"" +
+                ", \"numeroDeRegistro\":" + numeroDeRegistro +
+                ", \"especialidade\":\"" + especialidade + "\"" +
+                "}";
+    }
+
     public void setNumeroDeRegistro(Long numeroDeRegistro) {
         this.numeroDeRegistro = numeroDeRegistro;
     }

@@ -2,11 +2,36 @@ package com.company.DAO;
 
 import com.company.model.DAO;
 import com.company.model.Medico;
+import org.json.simple.JSONObject;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
 
 public class MedicoDAO implements DAO<Medico> {
 
     @Override
-    public void cadastrar(Medico obj) {
-        System.out.println(obj.getCpf());
+    public String cadastrar(Medico medico) {
+
+        JSONObject jsonObject = new JSONObject();
+
+        FileWriter writeFile = null;
+
+        jsonObject.put("Medico", medico);
+
+        try {
+            writeFile = new FileWriter("saida.json");
+            writeFile.write(jsonObject.toJSONString());
+            writeFile.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return jsonObject.toJSONString();
+    }
+
+    @Override
+    public List<Object> listar(Medico obj) {
+        return null;
     }
 }

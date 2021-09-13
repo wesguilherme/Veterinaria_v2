@@ -1,6 +1,9 @@
 {
-  "estado": "SP",
-  "nome": "Allan",
-  "sobrenome": "Romanato",
-  "pais": "Brasil"
+  "Medico": {
+    "cpf": "207.470.820-30",
+    "nome": "Etevaldo",
+    "sobrenome": "Lopes",
+    "numeroDeRegistro": 5555555,
+    "especialidade": "neuro"
+  }
 }
