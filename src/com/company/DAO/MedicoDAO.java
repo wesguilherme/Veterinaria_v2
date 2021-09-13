@@ -11,13 +11,13 @@ import java.util.List;
 public class MedicoDAO implements DAO<Medico> {
 
     @Override
-    public String cadastrar(Medico medico) {
+    public String cadastrar(List<Medico> medicos) {
 
         JSONObject jsonObject = new JSONObject();
 
         FileWriter writeFile = null;
 
-        jsonObject.put("Medico", medico);
+        jsonObject.put("Medico", medicos);
 
         try {
             writeFile = new FileWriter("saida.json");
